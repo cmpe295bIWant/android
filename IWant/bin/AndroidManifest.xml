@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmpe295.iwant"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+        <uses-permission android:name="com.ads.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cmpe295.iwant.MainActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Search results activity -->
+        <activity android:name=".SearchResultsActivity"
+            android:parentActivityName="com.cmpe295.iwant.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+ 
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".ServiceHandler" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.cmpe295.iwant.model.SingleComputerActivity" 
+            android:parentActivityName="com.cmpe295.iwant.HistoryActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".HistoryActivity"
+            android:parentActivityName="com.cmpe295.iwant.MainActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".CategoryActivity" 
+            android:parentActivityName="com.cmpe295.iwant.MainActivity">
+        </activity>
+         <activity
+            android:label="@string/app_name"
+            android:name=".ComputersActivity"
+            android:parentActivityName="com.cmpe295.iwant.MainActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".RecommendationActivity" 
+            android:parentActivityName="com.cmpe295.iwant.MainActivity">
+        </activity>
+    </application>
+
+</manifest>

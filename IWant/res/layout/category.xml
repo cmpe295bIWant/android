@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+ <ImageButton
+        android:id="@+id/imageAutomobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:src="@drawable/automobile" />
+  <ImageButton
+        android:id="@+id/imageComputers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:paddingLeft="100dp"
+        android:src="@drawable/computers" />
+   <ImageButton
+        android:id="@+id/imageVideoGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="200dp"
+        android:src="@drawable/videogames" />
+    <ImageButton
+        android:id="@+id/imageJewelry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="200dp"
+        android:paddingLeft="100dp"
+        android:src="@drawable/jewelry" />
+     <ImageButton
+        android:id="@+id/imageCameras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="300dp"
+        android:src="@drawable/cameras" />
+</GridView>
